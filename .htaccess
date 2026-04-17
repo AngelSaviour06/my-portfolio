@@ -1,0 +1,65 @@
+# Portfolio Website - Apache Configuration
+
+# Enable mod_rewrite
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Remove .php extension from URLs (optional)
+  # RewriteCond %{REQUEST_FILENAME} !-d
+  # RewriteCond %{REQUEST_FILENAME} !-f
+  # RewriteRule ^([^\.]+)$ $1.php [NC, L]
+
+  # Prevent direct access to sensitive folders
+  RewriteRule ^(includes|data|logs)/ - [F,L]
+</IfModule>
+
+# Enable GZIP compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Set proper cache headers for static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType text/html "access plus 1 week"
+  ExpiresByType application/json "access plus 1 day"
+</IfModule>
+
+# Set proper headers
+<IfModule mod_headers.c>
+  # Enable HTTPS
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+  
+  # Prevent MIME type sniffing
+  Header always set X-Content-Type-Options "nosniff"
+  
+  # Prevent clickjacking
+  Header always set X-Frame-Options "SAMEORIGIN"
+  
+  # Enable XSS protection
+  Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Disable directory listing
+<IfModule mod_autoindex.c>
+  Options -Indexes
+</IfModule>
+
+# Deny access to sensitive files
+<FilesMatch "\.env|\.git|\.gitignore|README\.md|composer\.json|composer\.lock">
+  Deny from all
+</FilesMatch>
+
+# Allow access to public assets
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+</IfModule>

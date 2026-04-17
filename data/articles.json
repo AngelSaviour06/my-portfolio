@@ -1,0 +1,64 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "slug": "building-scalable-php-applications",
+      "title": "Building Scalable PHP Applications",
+      "category": "Backend",
+      "date": "2024-01-15",
+      "reading_time": 8,
+      "excerpt": "Learn the best practices for designing and building PHP applications that can scale to handle millions of requests.",
+      "content": "<h2>Introduction</h2><p>Building scalable PHP applications requires careful planning and adherence to best practices. In this guide, we'll explore the key principles and techniques that will help you create robust, high-performance applications.</p><h2>1. Code Organization</h2><p>Start with a solid architecture. Whether you choose MVC, layered architecture, or microservices, consistency is key. Use PHP namespaces to organize your code and maintain clear separation of concerns.</p><h2>2. Database Optimization</h2><p>Your database is often the bottleneck. Use proper indexing, optimize queries, and consider caching strategies like Redis or Memcached. Connection pooling can also significantly improve performance under load.</p><h2>3. API Design</h2><p>Design RESTful APIs that are stateless and cacheable. Use proper HTTP methods and status codes. Document your APIs well to make them easier for teams to work with.</p><h2>4. Performance Monitoring</h2><p>Monitor your application in production using tools like New Relic, Datadog, or open-source alternatives. Track response times, error rates, and resource usage.</p><h2>Conclusion</h2><p>Scalability is not an afterthought—it's a fundamental consideration from day one. By following these principles, you'll build applications ready for growth.</p>"
+    },
+    {
+      "id": 2,
+      "slug": "modern-php-development-workflow",
+      "title": "Modern PHP Development Workflow",
+      "category": "Backend",
+      "date": "2024-01-08",
+      "reading_time": 6,
+      "excerpt": "Exploring the tools and practices that make PHP development more efficient and enjoyable in 2024.",
+      "content": "<h2>Introduction</h2><p>PHP development has evolved significantly. Today's workflow involves much more than writing code and pushing to production. Let's explore the tools that define modern PHP development.</p><h2>Version Control & CI/CD</h2><p>Git is essential. Combined with GitHub, GitLab, or Gitea, it provides version control and collaboration. Add continuous integration tools to automate testing and deployment.</p><h2>Package Management</h2><p>Composer is the standard for PHP package management. It handles dependencies and autoloading, keeping your projects organized and maintainable.</p><h2>Testing</h2><p>Write tests. Use PHPUnit for unit testing, Behat for behavior-driven testing, and integration tests for critical paths. Aim for high code coverage.</p><h2>Development Environment</h2><p>Docker containers ensure consistency between development and production. Tools like Docker Compose make setting up complex environments trivial.</p>"
+    },
+    {
+      "id": 3,
+      "slug": "understanding-rest-api-design",
+      "title": "Understanding REST API Design Principles",
+      "category": "Backend",
+      "date": "2023-12-28",
+      "reading_time": 10,
+      "excerpt": "A comprehensive guide to designing RESTful APIs that are intuitive, scalable, and maintainable.",
+      "content": "<h2>What is REST?</h2><p>REST (Representational State Transfer) is an architectural style for designing networked applications. It uses HTTP requests to perform CRUD operations on resources.</p><h2>Core Principles</h2><p>Resources should be nouns, not verbs. Use HTTP methods (GET, POST, PUT, DELETE) to represent actions. Keep your API stateless and leverage HTTP status codes properly.</p><h2>API Versioning</h2><p>Plan for API evolution. Consider URL versioning (/api/v1/), header versioning, or content negotiation. Communicate breaking changes clearly to users.</p><h2>Security</h2><p>Use HTTPS always. Implement authentication (OAuth 2.0, JWT) and authorization. Rate limiting protects your API from abuse. Always validate and sanitize input.</p><h2>Documentation</h2><p>Good documentation is crucial. Tools like OpenAPI/Swagger make it easier for developers to understand and integrate with your API.</p>"
+    },
+    {
+      "id": 4,
+      "slug": "frontend-performance-optimization",
+      "title": "Frontend Performance Optimization Tips",
+      "category": "Frontend",
+      "date": "2023-12-15",
+      "reading_time": 7,
+      "excerpt": "Practical techniques to improve your website's performance and user experience.",
+      "content": "<h2>Understanding Web Performance</h2><p>Website speed matters. Every 100ms of delay can result in loss of users. Performance optimization should be a priority from the start.</p><h2>Asset Optimization</h2><p>Minify CSS and JavaScript. Compress images using modern formats like WebP. Lazy load images and videos. Every byte saved improves load time.</p><h2>Caching Strategies</h2><p>Leverage browser caching with proper headers. Use CDNs to serve static assets from locations closer to your users. Implement service workers for offline support.</p><h2>Code Splitting</h2><p>Don't load everything at once. Use code splitting to load JavaScript only when needed. This dramatically improves initial page load.</p><h2>Monitoring</h2><p>Use tools like Lighthouse, WebPageTest, or your browser's DevTools. Monitor Core Web Vitals: LCP, FID, and CLS. Track real user metrics with tools like New Relic or Google Analytics.</p>"
+    },
+    {
+      "id": 5,
+      "slug": "database-design-best-practices",
+      "title": "Database Design Best Practices",
+      "category": "Backend",
+      "date": "2023-12-01",
+      "reading_time": 9,
+      "excerpt": "Essential database design principles that will serve you well regardless of which database system you choose.",
+      "content": "<h2>Normalization</h2><p>Understand normalization. Normal forms eliminate redundancy and improve data integrity. However, sometimes denormalization for performance is acceptable if done thoughtfully.</p><h2>Indexing</h2><p>Indexes speed up queries but slow down writes. Create indexes on columns you search or sort by frequently. Monitor index usage and remove unused ones.</p><h2>Relationships</h2><p>Use foreign keys to maintain referential integrity. Design your relationships carefully. One-to-many, many-to-many—choose the right structure.</p><h2>Transactions</h2><p>Use transactions to maintain ACID properties. Ensure data consistency across multiple related updates. Understand isolation levels and their trade-offs.</p><h2>Backup & Recovery</h2><p>Always have a backup strategy. Test your backups regularly. Implement point-in-time recovery capabilities.</p>"
+    },
+    {
+      "id": 6,
+      "slug": "security-in-web-applications",
+      "title": "Security in Web Applications",
+      "category": "Tutorial",
+      "date": "2023-11-20",
+      "reading_time": 11,
+      "excerpt": "Critical security considerations every developer should understand when building web applications.",
+      "content": "<h2>Common Vulnerabilities</h2><p>Know the OWASP Top 10. Injection attacks, broken authentication, sensitive data exposure, and more—these are real threats. Learn to identify and mitigate them.</p><h2>Input Validation</h2><p>Never trust user input. Validate all data on both client and server side. Escape output to prevent XSS attacks. Use parameterized queries to prevent SQL injection.</p><h2>Authentication & Authorization</h2><p>Implement strong authentication. Use established protocols like OAuth 2.0 and OpenID Connect. Implement proper authorization checks for every action.</p><h2>Encryption</h2><p>Use HTTPS for all communication. Encrypt sensitive data at rest. Use strong, industry-standard encryption algorithms.</p><h2>Regular Updates</h2><p>Keep dependencies updated. Monitor security advisories. Have a process for quickly patching vulnerabilities when they're discovered.</p>"
+    }
+  ]
+}

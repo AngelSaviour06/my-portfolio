@@ -1,0 +1,70 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "slug": "ecommerce-platform",
+      "title": "E-Commerce Platform",
+      "description": "A full-featured e-commerce platform built with PHP and MySQL, featuring product listings, shopping cart, and payment integration.",
+      "role": "Full Stack Developer",
+      "year": "2023",
+      "technologies": ["PHP", "MySQL", "React", "Stripe API"],
+      "link": "https://example.com/ecommerce",
+      "github": "https://github.com/example/ecommerce"
+    },
+    {
+      "id": 2,
+      "slug": "task-management-app",
+      "title": "Task Management Application",
+      "description": "A collaborative task management tool with real-time updates, team workspaces, and progress tracking.",
+      "role": "Backend Lead",
+      "year": "2023",
+      "technologies": ["PHP", "PostgreSQL", "WebSocket", "Docker"],
+      "link": "https://example.com/tasks",
+      "github": "https://github.com/example/tasks"
+    },
+    {
+      "id": 3,
+      "slug": "data-analytics-dashboard",
+      "title": "Analytics Dashboard",
+      "description": "Real-time analytics dashboard providing insights into user behavior, conversion metrics, and business intelligence.",
+      "role": "Full Stack Developer",
+      "year": "2022",
+      "technologies": ["PHP", "MySQL", "Chart.js", "API Development"],
+      "link": "https://example.com/analytics",
+      "github": "https://github.com/example/analytics"
+    },
+    {
+      "id": 4,
+      "slug": "social-network",
+      "title": "Social Network Platform",
+      "description": "A social networking platform with user profiles, messaging, and feed systems.",
+      "role": "Senior Developer",
+      "year": "2023",
+      "technologies": ["PHP", "Database Design", "API", "Real-time Features"],
+      "link": "",
+      "github": "https://github.com/example/social"
+    },
+    {
+      "id": 5,
+      "slug": "content-management-system",
+      "title": "Content Management System",
+      "description": "A headless CMS providing content management, versioning, and multi-site support.",
+      "role": "Architect",
+      "year": "2022",
+      "technologies": ["PHP", "Database", "API Development", "DevOps"],
+      "link": "https://example.com/cms",
+      "github": "https://github.com/example/cms"
+    },
+    {
+      "id": 6,
+      "slug": "api-microservices",
+      "title": "Microservices Architecture",
+      "description": "A microservices-based backend system with service discovery, load balancing, and monitoring.",
+      "role": "System Architect",
+      "year": "2023",
+      "technologies": ["PHP", "Docker", "Kubernetes", "Message Queue"],
+      "link": "",
+      "github": "https://github.com/example/microservices"
+    }
+  ]
+}
